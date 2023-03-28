@@ -1,0 +1,223 @@
+//////////////////////////
+//////// propios /////////
+//////////////////////////
+$principal: #8C52FF;
+
+//////////////////////////
+// colores por defecto ///
+//////////////////////////
+
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+////////////////////////////// escalas de girces 
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+////////////////////////////////////
+// paleta de colores por defecto ///
+////////////////////////////////////
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+
+
+@import "../complement/bootstrap/scss/bootstrap.scss";
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+}
+/*encabezado*/
+
+@media screen and (min-width: 728px) {
+    .container{
+        max-width: 700px;
+    }
+}
+.container:nth-child(1){
+    border: none;
+    background-color:  white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+}
+@media screen and (max-width: 375px) {
+    .container:nth-child(1) img {
+        width: 100px;
+        height: 100px;
+    }
+}
+.container:nth-child(1) h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+.container:nth-child(1) img{
+    width: 150px;
+    height: 150px;
+}
+/*cuerpo*/
+.container{
+    margin-top: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 1.5rem;
+    background-color: whitesmoke;
+}
+
+.olvi{
+    float: right;
+    font-size: 14pt;
+}
+@media screen and (max-width: 375px) {
+    .olvi{
+        float:none;
+        text-align: center;
+        
+    }
+}
+
+.container-sm{
+    display: flex; 
+}
+
+.form-control{
+    color: black;
+    font-size: 20px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $principal;
+}
+#exampleInputEmail1{
+    background-color: rgba(255, 255, 255, 0);
+}
+#exampleInputPassword1{
+    background-color: rgba(255, 255, 255, 0);
+}
+.form-check-input{
+    background-color: rgba(0, 0, 0, 0.055);
+    color: white;
+    border: 1px solid black;
+}
+
+.container-iconos{
+    border-bottom: 1px solid $principal;
+    padding: 0.3rem;
+}
+
+
+button{
+    height: 3rem;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: $primary;
+
+}
+.container-md{
+    margin-top: 25px;
+    border-top: 1px solid $principal;
+}
+.container-md h4{
+    text-align: center;
+    margin-top: 10px;
+}
+img{
+    cursor: pointer;
+    height: 35px;
+}
+.container-img{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 20px;
+}
+.rounded{
+    margin-left: 5rem;
+}
+.container:nth-child(3){
+    text-align: center;
+    height: 5rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+.container:nth-child(4){
+    margin-top: 3rem;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.container:nth-child(4) a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.container:nth-child(4) a:hover{
+    text-decoration: underline;
+}
+.container:nth-child(4) a:nth-child(4){
+    color: black;
+}
+.container:nth-child(4) a:nth-child(4):hover{
+    color: $primary;
+    text-decoration: underline;
+}
+.container > div a{
+    margin-left: 20px;
+}
+
+@media screen and (max-width:425px) {
+
+    .container:nth-child(4){
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+    }
+    .container:nth-child(4) a{
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 375px) {
+    .container:nth-child(4){
+        margin-top: 1.5rem;
+    }
+}
+
+
+footer{
+    margin-top: 10px;
+    color: $white;
+    background-color: $black;
+    text-align: center;
+}
